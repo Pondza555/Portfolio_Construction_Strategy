@@ -1,6 +1,6 @@
 # Portfolio Construction Strategy
 
-This project builds and evaluates **two portfolio construction strategies** across **six portfolios** using Yahoo Finance data and a consistent out-of-sample backtest.
+This project builds and evaluates **two portfolio construction strategies** across **six portfolios** using Yahoo Finance data.
 
 ---
 
@@ -84,13 +84,10 @@ Focus on the impact of **portfolio rebalancing frequency** by maintaining the sa
 3. **Strategy 2 – Rebalancing Frequency**
    - Monthly/Quarterly/Annual rebalancing by maintaining the same stock selection/weighting rules to isolate the influence of rebalancing frequency.
 
-4. **Evaluation Metrics (Annual)**
-  - **CAGR**
-  - **Volatility**
-  - **Sharpe Ratio**
-  - **Max Drawdown (MDD)**
-  - **Sortino / Calmar**
-  - **95% VaR + Monte-Carlo**
+4. **Result**
+   - The rebalance frequency (Strategy 2) clearly outperforms using Efficient Frontier on the signal (Strategy 1).
+   - Annual rebalancing provides the highest returns and Sharpe, while Monthly better limits risk and drawdown, making it suitable for investors who weigh differently between “maximum returns” and “capital stability.”
+   - The EF portfolio, based on Sharpe/Beta/z-score signals, is more suitable as a defensive sleeve than the primary return driver in this data set.
 
 ---
 
@@ -98,14 +95,14 @@ Focus on the impact of **portfolio rebalancing frequency** by maintaining the sa
 
 We compare **two portfolio construction strategies** across **six portfolios** on S&P 500 stocks
 
-**Strategy 1 (Portfolios 1–3): Signal-Driven Efficient Frontier**
+- **Strategy 1 (Portfolios 1–3): Signal-Driven Efficient Frontier**
   - Select stocks using **Sharpe Ratio**, **CAPM Beta** and **z-score**, then construct portfolios on the **Mean–Variance Efficient Frontier**.
 
-**Strategy 2 (Portfolios 4–6): Rebalancing Frequency**
+- **Strategy 2 (Portfolios 4–6): Rebalancing Frequency**
   - Hold a consistent baseline selection/weighting rule and vary only the **rebalancing frequency** to isolate implementation effects.
   - **P4 – Monthly**, **P5 – Quarterly**, **P6 – Annually** rebalancing.
 
-**Result** show that **EF portfolios** tend to lower volatility, drawdowns and also low return, while the **rebalancing frequency** more volatility and more risk too.
+- **Result** show that **EF portfolios** tend to lower volatility, drawdowns and also low return, while the **rebalancing frequency** more volatility and more risk too.
 
 
 
